@@ -1,0 +1,20 @@
+include header.pug
+
+block content
+    <div class="container">
+        <h1 class="text-center">User Dashboard</h1>
+        <br>
+        
+        <div class="container mt-4" style="width:50%;margin-bottom: 30px">
+            <div class=" bg-info bg-gradient"style="display:flex;justify-content:center;align-items:center;padding-top:20px">
+                <h2 style="color: black;text-align:center">Total Password Category : - </h2>
+                <h2  style="color: red;text-align:center">#{passCatCount}</h2>
+            </div>
+            <div class=" bg-info bg-gradient"style="display:flex;justify-content:center;align-items:center;padding-top:20px;padding-bottom:15px">
+                <h2  style="color: black;text-align:center;">Total Password Details : - </h2>
+                <h2  style="color: red;text-align:center">#{passCount}</h2>
+            </div>
+        </div>
+    </div>
+ 
+include footer.pug

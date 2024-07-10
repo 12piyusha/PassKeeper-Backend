@@ -1,0 +1,46 @@
+include header.pug
+
+block content
+
+    <div class="container"style="margin-top:0px">
+            <h1 >View Combine Password Details</h1>
+            <br>
+            <div id="table-box">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Password Category Name</th>
+                            <th>Project Name</th>
+                            <th>Password Catgeory</th>
+                            <th>Password Category ID</th>
+                            <th>Date & Time</th>
+                            <th>View Password</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        if records.length>0
+                            each user in records
+                                <tr>
+                                    <td>#{user.password_category}</td>
+                                    <td>#{user.project_name}</td>
+                                    <td>#{user.pass_cat_details.password_category}</td>
+                                    <td>#{user.pass_cat_details._id}</td>
+                                    <td>#{user.pass_cat_details.date}</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm" href="/view/#{user._id}"><i class="fa fa-eye"></i></a>
+                                    </td>
+                                </tr>
+                               
+                        else 
+                            <tr> 
+                                <td>(colspan="5") No Record Found</td>
+                            </tr>
+                    </tbody>
+                </table>
+
+             
+            </div>
+    </div>
+
+include footer.pug
